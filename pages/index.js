@@ -1,10 +1,15 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import Workspace from "../components/Workspace";
 
 const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+  position: absolute;
+`;
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <>
+      <Title>عيد الأم</Title>
+      <Workspace />
+    </>
+  );
 }
