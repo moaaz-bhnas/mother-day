@@ -4,7 +4,7 @@ import Cube from "./Cube";
 
 const Workspace = memo(() => {
   return (
-    <StyledWorkspace>
+    <StyledWorkspace aria-hidden="true">
       <Scene>
         <Cube x={-10} y={10} />
         <Cube x={10} y={10} />
