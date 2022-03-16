@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import styled from "styled-components";
 
-const Cube = memo(({ bg = "transparent", size = 8, x = 0, y = 0, z = 0 }) => {
+const Cube = memo(({ bg = "transparent", size = 6, x = 0, y = 0, z = 0 }) => {
   return (
     <StyledCube bg={bg} size={size} x={x} y={y} z={z}>
       <Front size={size} />
@@ -22,6 +22,7 @@ const StyledCube = styled.div`
 
   background-color: ${({ bg }) => bg};
 
+  transition: transform 0.3s;
   transform: ${({ x, y, z }) => `translate3d(${x}rem, ${y}rem, ${z}rem)`};
 
   transform-style: preserve-3d;

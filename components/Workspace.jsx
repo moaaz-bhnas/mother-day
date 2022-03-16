@@ -6,8 +6,7 @@ const Workspace = memo(() => {
   return (
     <StyledWorkspace aria-hidden="true">
       <Scene>
-        <Cube x={-10} y={10} />
-        <Cube x={10} y={10} />
+        <Cube />
       </Scene>
     </StyledWorkspace>
   );
