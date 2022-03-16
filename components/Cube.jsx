@@ -35,8 +35,6 @@ const StyledCube = styled.div`
   transform-style: preserve-3d;
 
   animation: ${({ x, y, z }) => zoom(x, y, z)} 6s ease-out 1s both;
-
-  transition: transform 2s;
 `;
 
 const Face = styled.div`
