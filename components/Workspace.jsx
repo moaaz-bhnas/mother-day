@@ -6,7 +6,10 @@ const Workspace = memo(() => {
   return (
     <StyledWorkspace aria-hidden="true">
       <Scene>
-        <Cube />
+        <Cube x={-3} />
+        <Cube x={-1} />
+        <Cube x={1} />
+        <Cube x={3} />
       </Scene>
     </StyledWorkspace>
   );
@@ -37,7 +40,7 @@ const Scene = styled.div`
   align-items: center;
 
   transform-style: preserve-3d;
-  perspective: 400px;
+  perspective: 500px;
   perspective-origin: 50% 50%;
 `;
 

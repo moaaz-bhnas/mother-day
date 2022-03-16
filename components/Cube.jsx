@@ -1,7 +1,8 @@
 import React, { memo } from "react";
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 
-const Cube = memo(({ bg = "transparent", size = 6, x = 0, y = 0, z = 0 }) => {
+const Cube = memo(({ bg = "transparent", size = 8, x = 0, y = 0, z = 0 }) => {
   return (
     <StyledCube bg={bg} size={size} x={x} y={y} z={z}>
       <Front size={size} />
@@ -14,6 +15,15 @@ const Cube = memo(({ bg = "transparent", size = 6, x = 0, y = 0, z = 0 }) => {
   );
 });
 
+const zoom = (x, y, z) => keyframes`
+  0% {
+    transform: translate3d(${x}rem, ${y}rem, ${z - 70}rem);
+  }
+  100% {
+    transform: translate3d(${x}rem, ${y}rem, ${z}rem) rotate3d(1, 1, 1, 720deg);
+  }
+`;
+
 const StyledCube = styled.div`
   position: relative;
 
@@ -22,10 +32,11 @@ const StyledCube = styled.div`
 
   background-color: ${({ bg }) => bg};
 
-  transition: transform 0.3s;
-  transform: ${({ x, y, z }) => `translate3d(${x}rem, ${y}rem, ${z}rem)`};
-
   transform-style: preserve-3d;
+
+  animation: ${({ x, y, z }) => zoom(x, y, z)} 6s ease-out 1s both;
+
+  transition: transform 2s;
 `;
 
 const Face = styled.div`
@@ -35,6 +46,8 @@ const Face = styled.div`
 
   background-color: inherit;
   border: 1px solid;
+
+  background-color: pink;
 `;
 
 const Front = styled(Face)`
