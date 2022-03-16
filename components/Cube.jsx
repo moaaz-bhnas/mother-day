@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 
-const Cube = memo(({ bg = "transparent", size = 8, x = 0, y = 0, z = 0 }) => {
+const Cube = memo(({ bg = "transparent", size = 7, x = 0, y = 0, z = 0 }) => {
   return (
     <StyledCube bg={bg} size={size} x={x} y={y} z={z}>
       <Front size={size} />
