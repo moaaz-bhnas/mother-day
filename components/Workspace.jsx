@@ -20,7 +20,7 @@ const Workspace = memo(() => {
         />
         <Cube
           x={3}
-          images={["/images/10.jpg", "/images/11.jpeg", "/images/12.jpeg"]}
+          images={["/images/10.jpg", "/images/11.jpg", "/images/12.jpg"]}
         />
       </Scene>
     </StyledWorkspace>
