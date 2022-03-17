@@ -6,10 +6,22 @@ const Workspace = memo(() => {
   return (
     <StyledWorkspace aria-hidden="true">
       <Scene>
-        <Cube x={-3} />
-        <Cube x={-1} />
-        <Cube x={1} />
-        <Cube x={3} />
+        <Cube
+          x={-3}
+          images={["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"]}
+        />
+        <Cube
+          x={-1}
+          images={["/images/4.jpg", "/images/5.jpg", "/images/6.jpg"]}
+        />
+        <Cube
+          x={1}
+          images={["/images/7.jpg", "/images/8.jpg", "/images/9.jpg"]}
+        />
+        <Cube
+          x={3}
+          images={["/images/10.jpg", "/images/11.jpeg", "/images/12.jpeg"]}
+        />
       </Scene>
     </StyledWorkspace>
   );
